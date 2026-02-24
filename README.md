@@ -1,73 +1,33 @@
-# React + TypeScript + Vite
+# 🎵 Spotify Top Global Songs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Вебдодаток на React для перегляду рейтингу найбільш популярних пісень усіх часів. Проект демонструє роботу з асинхронними запитами, типізацію даних та компонентний підхід.
 
-Currently, two official plugins are available:
+## 🛠 Стек технологій
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React (Vite)** — UI-бібліотека та середовище розробки.
+- **TypeScript** — сувора типізація для безпеки коду.
+- **JSON Server** — імітація бази даних та REST API.
+- **CSS Modules** — ізольована стилізація компонентів.
 
-## React Compiler
+## 🌟 Ключові особливості
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Адаптивна верстка:** коректне відображення карток на будь-яких пристроях (CSS Grid).
+- **Розумна пагінація:** поділ списку пісень на зручні сторінки (таби).
+- **Системна тема:** автоматична підтримка темного/світлого режимів.
+- **Умовний рендеринг:** наявність інтерактивного стартового екрана перед доступом до чарту.
 
-## Expanding the ESLint configuration
+## Як запустити проект локально
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. Клонування та встановлення
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone [https://github.com/AlexandraKurylo/Song-cards](https://github.com/AlexandraKurylo/Song-cards)
+cd назва-проекту
+npm install
+2. Запуск бази даних (Terminal 1)
+Bash
+npm run server
+3. Запуск додатку (Terminal 2)
+Bash
+npm run dev
 ```
