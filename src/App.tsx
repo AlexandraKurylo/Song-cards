@@ -9,7 +9,7 @@ import "./index.css";
 export default function App() {
   const [songs, setSongs] = useState<CardData[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<number>(0);
 
   const itemsPerPage = 2;
@@ -35,17 +35,17 @@ export default function App() {
 
   return (
     <div className="app-container">
-      {isOpen && (
+      {!isOpen && (
         <div className="start-screen">
-          <Button onClick={() => setIsOpen(false)} variant="start">
+          <Button onClick={() => setIsOpen(true)} variant="start">
             Start Exploring
           </Button>
         </div>
       )}
 
-      {!isOpen && (
+      {isOpen && (
         <div className="app">
-          <span className="close" onClick={() => setIsOpen(true)}>
+          <span className="close" onClick={() => setIsOpen(false)}>
             &times;
           </span>
 
