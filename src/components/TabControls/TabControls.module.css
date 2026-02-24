@@ -1,0 +1,15 @@
+.tabButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Щоб таби не вилазили за межі на малих екранах */
+}
+
+/* Додаткова стилізація для активного стану, 
+   якщо вона не прописана в Button.module.css */
+.tabButtons :global(.active) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.2);
+}

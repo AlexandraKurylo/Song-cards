@@ -1,0 +1,83 @@
+/* --- БАЗОВА КНОПКА --- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 2px solid transparent; 
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+}
+
+.button:focus,
+.button:focus-visible {
+  outline: none;
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none; 
+}
+
+.start {
+  background-color: var(--btn-accent);
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  font-size: 1.4rem;
+  border-radius: 50px;
+}
+
+.start:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
+}
+
+.tab {
+  background-color: var(--body-bg-color);
+}
+
+.tab:global(.active) {
+  border-color: var(--btn-accent);
+  background-color: var(--card-bg-color);
+  color: var(--btn-accent);
+}
+
+.tab:not(:global(.active)):hover {
+  border-color: rgba(100, 108, 255, 0.5);
+}
+
+.nav {
+  background-color: var(--main-bg-color);
+  min-width: 130px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav:hover {
+  background-color: var(--btn-bg-color);
+  border-color: var(--btn-accent);
+  color: var(--btn-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav b {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.nav:hover b {
+  transform: scale(1.2);
+}

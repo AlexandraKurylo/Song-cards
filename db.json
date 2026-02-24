@@ -1,0 +1,49 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "title": "Blinding Lights",
+      "description": "The Weeknd",
+      "date": "November 29, 2019",
+      "imageUrl": "/img-1.jpg",
+      "tags": ["#synthwave", "#synth-pop", "#electropop"],
+      "archived": false
+    },
+    {
+      "id": 2,
+      "title": "Shape of You",
+      "description": "Ed Sheeran",
+      "date": "January 6, 2017",
+      "imageUrl": "/img-1.jpg",
+      "tags": ["#pop", "#dancehall", "#tropicalHouse"],
+      "archived": false
+    },
+    {
+      "id": 3,
+      "title": "Sweater Weather",
+      "description": "The Neighbourhood",
+      "date": "March 28, 2012",
+      "imageUrl": "/img-1.jpg",
+      "tags": ["#alternative-rock", "#indie-pop", "#indie-rock"],
+      "archived": false
+    },
+    {
+      "id": 4,
+      "title": "Starboy",
+      "description": "The Weeknd ft. Daft Punk",
+      "date": "September 21, 2016",
+      "imageUrl": "/img-1.jpg",
+      "tags": ["#alternative-r&b", "#electropop", "#synth-pop"],
+      "archived": false
+    },
+    {
+      "id": 5,
+      "title": "As It Was",
+      "description": "Harry Styles",
+      "date": "April 1, 2022",
+      "imageUrl": "/img-1.jpg",
+      "tags": ["#synth-pop", "#new-wave", "#pop"],
+      "archived": false
+    }
+  ]
+}
