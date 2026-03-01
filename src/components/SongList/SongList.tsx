@@ -1,7 +1,11 @@
 import type { FC } from "react";
-import type { ISongListProps } from "../../types/types";
+import type { CardData } from "../../types/types";
 import { SongCard } from "../SongCard";
 import cls from "./SongList.module.css";
+
+export interface ISongListProps {
+  items: CardData[];
+}
 
 export const SongList: FC<ISongListProps> = ({ items }) => {
   if (items.length === 0) return <div className={cls.empty}>No songs found.</div>;

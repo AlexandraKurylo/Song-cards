@@ -33,11 +33,32 @@ export default function App() {
 
   const currentSongs = songs.slice(activeTab * itemsPerPage, activeTab * itemsPerPage + itemsPerPage);
 
+  const handleOpen = () => setIsOpen(true);
+
+  const handleClose = () => {
+    setIsOpen(false);
+    setActiveTab(0);
+  };
+
+  const handleNext = () => {
+    if (activeTab < totalTabs - 1) {
+      setActiveTab((prev) => prev + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (activeTab > 0) {
+      setActiveTab((prev) => prev - 1);
+    }
+  };
+
+  const handleTabChange = (index: number) => setActiveTab(index);
+
   return (
     <div className="app-container">
       {!isOpen && (
         <div className="start-screen">
-          <Button onClick={() => setIsOpen(true)} variant="start">
+          <Button onClick={handleOpen} variant="start">
             Start Exploring
           </Button>
         </div>
@@ -45,19 +66,19 @@ export default function App() {
 
       {isOpen && (
         <div className="app">
-          <span className="close" onClick={() => setIsOpen(false)}>
+          <span className="close" onClick={handleClose}>
             &times;
           </span>
 
           <h1>Spotify Top Songs</h1>
 
-          <TabControls totalTabs={totalTabs} activeTab={activeTab} onTabChange={setActiveTab} />
+          <TabControls totalTabs={totalTabs} activeTab={activeTab} onTabChange={handleTabChange} />
 
           {isLoading ? <div className="loading">Loading music...</div> : <SongList items={currentSongs} />}
 
           <NavigationControls
-            onPrev={() => setActiveTab((p) => p - 1)}
-            onNext={() => setActiveTab((p) => p + 1)}
+            onPrev={handlePrev}
+            onNext={handleNext}
             isPrevDisabled={activeTab === 0}
             isNextDisabled={activeTab === totalTabs - 1}
           />

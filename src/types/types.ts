@@ -18,10 +18,6 @@ export interface IButtonProps {
   variant?: "tab" | "start" | "nav";
 }
 
-export interface ISongListProps {
-  items: CardData[];
-}
-
 export interface ITabControlsProps {
   totalTabs: number;
   activeTab: number;
